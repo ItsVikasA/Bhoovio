@@ -596,11 +596,19 @@ const Construction = () => {
                 Developed with ❤️ by
               </Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2 }}>
-                {['Vikas', 'Rakesh', 'Sanjana', 'Rajeshwari'].map((developer, index) => (
+                {[
+                  { name: 'Vikas', url: 'https://www.linkedin.com/in/vikas028' },
+                  { name: 'Rakesh', url: '#' },
+                  { name: 'Sanjana', url: 'https://www.linkedin.com/in/sanjana-ammanagimath-aa6baa329' },
+                  { name: 'Rajeshwari', url: '#' }
+                ].map((developer, index) => (
                   <Chip
                     key={index}
-                    label={developer}
-                    component={motion.div}
+                    label={developer.name}
+                    component={motion.a}
+                    href={developer.url}
+                    target={developer.url !== '#' ? '_blank' : undefined}
+                    rel={developer.url !== '#' ? 'noopener noreferrer' : undefined}
                     whileHover={{ scale: 1.05 }}
                     sx={{
                       background: 'rgba(16, 185, 129, 0.1)',
@@ -608,9 +616,12 @@ const Construction = () => {
                       border: '1px solid rgba(16, 185, 129, 0.3)',
                       fontWeight: 500,
                       fontSize: '0.85rem',
+                      textDecoration: 'none',
+                      cursor: 'pointer',
                       '&:hover': {
                         background: 'rgba(16, 185, 129, 0.2)',
-                        borderColor: '#10b981'
+                        borderColor: '#10b981',
+                        color: '#34d399'
                       }
                     }}
                   />
