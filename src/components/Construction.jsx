@@ -545,7 +545,8 @@ const Construction = () => {
                 textAlign: 'center',
                 position: 'relative',
                 border: '1px solid rgba(16, 185, 129, 0.3)',
-                backdropFilter: 'blur(20px)'
+                backdropFilter: 'blur(20px)',
+                mb: 8
               }}
             >
               <Typography variant="h3" sx={{ fontWeight: 700, mb: 3, color: '#f1f5f9' }}>
@@ -571,6 +572,61 @@ const Construction = () => {
               >
                 Get Early Access 🚀
               </Button>
+            </Box>
+          </motion.div>
+
+          {/* Developer Credits */}
+          <motion.div variants={itemVariants}>
+            <Box 
+              sx={{ 
+                textAlign: 'center',
+                py: 6,
+                borderTop: '1px solid rgba(71, 85, 105, 0.3)',
+                mt: 8
+              }}
+            >
+              <Typography 
+                variant="body2" 
+                sx={{ 
+                  color: '#64748b', 
+                  mb: 2,
+                  fontSize: '0.9rem'
+                }}
+              >
+                Developed with ❤️ by
+              </Typography>
+              <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2 }}>
+                {['Vikas', 'Rakesh', 'Sanjana', 'Rajeshwari'].map((developer, index) => (
+                  <Chip
+                    key={index}
+                    label={developer}
+                    component={motion.div}
+                    whileHover={{ scale: 1.05 }}
+                    sx={{
+                      background: 'rgba(16, 185, 129, 0.1)',
+                      color: '#10b981',
+                      border: '1px solid rgba(16, 185, 129, 0.3)',
+                      fontWeight: 500,
+                      fontSize: '0.85rem',
+                      '&:hover': {
+                        background: 'rgba(16, 185, 129, 0.2)',
+                        borderColor: '#10b981'
+                      }
+                    }}
+                  />
+                ))}
+              </Box>
+              <Typography 
+                variant="body2" 
+                sx={{ 
+                  color: '#475569', 
+                  mt: 3,
+                  fontSize: '0.8rem',
+                  opacity: 0.8
+                }}
+              >
+                © 2025 Bhoovio. Building the future of sustainable commerce.
+              </Typography>
             </Box>
           </motion.div>
         </motion.div>
