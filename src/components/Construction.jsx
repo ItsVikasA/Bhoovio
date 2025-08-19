@@ -600,7 +600,7 @@ const Construction = () => {
                   { name: 'Vikas', url: 'https://www.linkedin.com/in/vikas028' },
                   { name: 'Rakesh', url: '#' },
                   { name: 'Sanjana', url: 'https://www.linkedin.com/in/sanjana-ammanagimath-aa6baa329' },
-                  { name: 'Rajeshwari', url: '#' }
+                  { name: 'Rajeshwari', url: 'https://www.linkedin.com/in/rajeshwari-hiremath-a69061270' }
                 ].map((developer, index) => (
                   <Chip
                     key={index}
